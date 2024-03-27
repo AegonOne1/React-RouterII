@@ -11,7 +11,7 @@ const MiApi = () => {
                     throw new Error('Error al obtener datos de la Api')
                 }
                 const data = await resp.json()
-                console.log(data)
+                // console.log(data)
                 setDatosApi(data)
             } catch (error) {
                 console.error(error)
