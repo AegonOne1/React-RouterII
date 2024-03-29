@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom"
 const NavBar = () => {
     return(
         <nav>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/Pokemones">Pokemones</NavLink>
+            <NavLink className={({isActive}) => isActive ? 'active' : '' } to="/">Home</NavLink>
+            <NavLink className={({isActive}) => isActive ? 'active' : '' } to="/Pokemones">Pokemones</NavLink>
         </nav>
     )
 }

@@ -4,6 +4,7 @@ import NotFound from './views/NotFound'
 import Pokemones from './views/Pokemones'
 import NavBar from './components/NavBar'
 import MiApi from './components/MiApi'
+import PokemonDetalles from './views/PokemonDetalles'
 import './App.css'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/Pokemones" element={<Pokemones data={datosApi}/>}/>
+        <Route path="/Pokemones/:PokemonId" element={<PokemonDetalles data={datosApi}/>}/>
         <Route path="*" element={<NotFound/>}/>
       </Routes>
     </div>
