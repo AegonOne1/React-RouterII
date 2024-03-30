@@ -33,11 +33,17 @@ const PokemonDetalles = (props) => {
 
     let statDetail = []
     if (Stats.stats){
-        statDetail = Stats.stats.map(stat =>({
+        statDetail = Stats.stats.map(stat => ({
             name: stat.stat.name,
             base_stat: stat.base_stat
         }))
         // console.log(statDetail)
+    }
+
+    let typeDetail = []
+    if (Stats.types){
+        typeDetail = Stats.types.map(type => type.type.name)
+        // console.log(typeDetail)
     }
 
     let imageUrl = ''
@@ -57,6 +63,12 @@ const PokemonDetalles = (props) => {
             <div>
                 {statDetail.map((stat, index) => (
                     <p key={index}>{stat.name}: {stat.base_stat}</p>
+                ))}
+            </div>
+
+            <div>
+                {typeDetail.map((type, index) => (
+                    <p key={index}>Tipo {index + 1}: {type}</p>
                 ))}
             </div>
         </div>
