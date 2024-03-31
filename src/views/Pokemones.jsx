@@ -17,9 +17,9 @@ const Pokemones = (props) => {
     }
 
     return (
-        <div>
+        <div className="selectorLayout">
             <h1>Selecciona un pokemon</h1>
-            <select onChange={(e) => handleChange(e)}>
+            <select className="selectConfig" onChange={(e) => handleChange(e)}>
                         <option value="">Selecciona tu pokemon</option>
                         {pokemones.map((pokemon, index) => (
                             <option key={index} value={pokemon.name}>
@@ -27,7 +27,7 @@ const Pokemones = (props) => {
                             </option>
                         ))}
             </select>
-            <button onClick={handleClick}>Ver Detalle</button>
+            <button className="buttonConfig" onClick={handleClick}>Ver Detalle</button>
         </div>
     )
 }

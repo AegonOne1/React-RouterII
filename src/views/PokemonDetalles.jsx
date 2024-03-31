@@ -53,20 +53,17 @@ const PokemonDetalles = (props) => {
     }
 
     return(
-        <div>
+        <div className="cardLayout">
             <div>
-                <img src={imageUrl} alt="" />
+                <img className="imageCard" src={imageUrl} alt={Stats.name} />
             </div>
-            <h1>{Stats.name}</h1>
-            <p>Height: {Stats.height}</p>
-            <p>Weight: {Stats.weight}</p>
-            <div>
+            <div className="infoCard">
+                <h1>{Stats.name}</h1>
+                <p>Height: {Stats.height}</p>
+                <p>Weight: {Stats.weight}</p>
                 {statDetail.map((stat, index) => (
                     <p key={index}>{stat.name}: {stat.base_stat}</p>
                 ))}
-            </div>
-
-            <div>
                 {typeDetail.map((type, index) => (
                     <p key={index}>Tipo {index + 1}: {type}</p>
                 ))}
